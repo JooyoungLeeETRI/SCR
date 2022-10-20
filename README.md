@@ -33,40 +33,44 @@ Our SCR model is trained in a step-wise manner as follows:
 * Step 1: training of the base compression model
 ~~~
 cd 1_hyperprior
-python main.py --is_train True --quality_level 8
+python main.py --is_train True --quality_level 8 --input_dataset [INPUT_DATASET_PATH]
 ~~~
 
 * Step 2: training of the SCR model without the selective compression components
 ~~~
 cd ..
 cd 2_SCR_wo_SC
-python main.py --is_train True
+python main.py --is_train True --input_dataset [INPUT_DATASET_PATH]
 ~~~
 
 * Step 3: training of the SCR full model
 ~~~
 cd ..
 cd 3_SCR_full
-python main.py --is_train True
+python main.py --is_train True --input_dataset [INPUT_DATASET_PATH]
 ~~~
+
+INPUT_DATASET_PATH indicates the path of the directory that contains the 256x256-sized patches of the trainset images.
 
 ## Test
 * For the base compression model
 ~~~
 cd 1_hyperprior
-python main.py --is_test True --quality_level 8
+python main.py --is_test True --quality_level 8 --testset_path [TESTSET_PATH]
 ~~~
 
 * For the SCR model without the selective compression components
 ~~~
 cd ..
 cd 2_SCR_wo_SC
-python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8}
+python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8} --testset_path [TESTSET_PATH]
 ~~~
 
 * For the SCR full model
 ~~~
 cd ..
 cd 3_SCR_full
-python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8}
+python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8} --testset_path [TESTSET_PATH]
 ~~~
+
+TESTSET_PATH indicates the path of the directory that contains the testset images such as 24 Kodak imageset PNG files.

@@ -50,7 +50,7 @@ cd 3_SCR_full
 python main.py --is_train True --input_dataset [INPUT_DATASET_PATH]
 ~~~
 
-INPUT_DATASET_PATH indicates the path of the directory that contains the 256x256-sized patches of the trainset images.
+INPUT_DATASET_PATH indicates the path of directory that contains the 256x256-sized patches of the trainset images.
 
 ## Test
 * For the base compression model
@@ -73,4 +73,4 @@ cd 3_SCR_full
 python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8} --testset_path [TESTSET_PATH]
 ~~~
 
-TESTSET_PATH indicates the path of the directory that contains the testset images such as 24 Kodak imageset PNG files.
+TESTSET_PATH indicates the path of the directory that contains the testset images such as the 24 Kodak imageset PNG files.

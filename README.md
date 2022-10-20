@@ -1,9 +1,9 @@
 # Selective compression learning of latent representations for variable-rate image compression
 Repository of the paper "Selective compression learning of latent representations for variable-rate image compression"
 
->|![Samples](https://drive.google.com/file/d/1L6_xHBykTeOR_aLZozas7SBwIE7bi_6b/view?usp=sharing)|
->|:--:|
->| *Test results over the Tecnick SAMPLING imageset* |
+| ![Samples](./Kodim15_animation.gif) |
+|:--:|
+| *Sample reconstructions and their corresponding 3D binary masks* |
 
 ## Introduction
 
@@ -48,4 +48,25 @@ python main.py --is_train True
 cd ..
 cd 3_SCR_full
 python main.py --is_train True
+~~~
+
+## Test
+* For the base compression model
+~~~
+cd 1_hyperprior
+python main.py --is_test True --quality_level 8
+~~~
+
+* For the SCR model without the selective compression components
+~~~
+cd ..
+cd 2_SCR_wo_SC
+python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8}
+~~~
+
+* For the SCR full model
+~~~
+cd ..
+cd 3_SCR_full
+python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8}
 ~~~

@@ -74,3 +74,7 @@ python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8} --testset_path [
 ~~~
 
 TESTSET_PATH indicates the path of the directory that contains the testset images such as the 24 Kodak imageset PNG files.
+
+
+## To use the pretrained models
+The pretrained models will be uploaded soon.

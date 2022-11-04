@@ -74,6 +74,7 @@ python main.py --is_test True --quality_level {1,2,3,4,5,6,7,8} --testset_path [
 ~~~
 
 TESTSET_PATH indicates the path of the directory that contains the testset images such as the 24 Kodak imageset PNG files.
+The bpp and PSNR(MS-SSIM) results are saved as corresponding CSV files in the "logs" directory. Note that the last rows in the CSV files indicate average values.
 
 
 ## To use the pretrained models

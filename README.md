@@ -78,4 +78,8 @@ The bpp and PSNR(MS-SSIM) results are saved as corresponding CSV files in the "l
 
 
 ## To use the pretrained models
-The pretrained models will be uploaded soon.
+Please follow the following steps to use the pretrained models:
+* Dowload the pretrained models (or one of the models) from [here](https://drive.google.com/drive/folders/1KbTZBcJggrnBaZddKrWiN7S60cEtD9U6?usp=sharing).
+* Unpack the downloaded zip files.
+* Move the unpacked "logs" directories into the corresponding model directories.
+* Now you can test with the pretrained models or use them as pretrained models for the next step of the training.

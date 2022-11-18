@@ -174,7 +174,7 @@ class Manager(object):
             self.pred_sigma, self.importance_map, _, _ = Hyper_Decoder(self.z_tilde, self.N, self.M, self.data_format)
 
             with tf.variable_scope("MASK") as vs:
-                self.gamma = tf.maximum(tf.Variable(tf.ones([8, self.M]), name="GAMMA"), 0)
+                self.gamma = tf.maximum(tf.Variable(tf.ones([8, self.M]), name="POW_VAR"), 0)
 
             with tf.variable_scope("ADAPTIVE_Q") as vs:
                 TINY = 1e-5
@@ -281,7 +281,7 @@ class Manager(object):
                 self.z_hat, self.N, self.M, self.data_format)
 
         with tf.variable_scope("MASK") as vs:
-            self.gamma = tf.maximum(tf.Variable(tf.ones([8, self.M]), name="GAMMA"), 0)
+            self.gamma = tf.maximum(tf.Variable(tf.ones([8, self.M]), name="POW_VAR"), 0)
 
         with tf.variable_scope("ADAPTIVE_Q") as vs:
             TINY = 1e-5

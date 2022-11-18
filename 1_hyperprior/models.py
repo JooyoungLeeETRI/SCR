@@ -69,20 +69,20 @@ def Decoder(x,input_channel, N, M, data_format):
 
 def Hyper_Encoder(x, N, data_format):
     with tf.variable_scope("HE") as vs:
-        # x = tf.abs(x)
+        x = tf.abs(x)
         # Encoder
         # =======================================================================================================
         filter_num = N
         filter_size = 3
         stride = 1
         x = slim.conv2d(x, filter_num, filter_size, stride, activation_fn=None)
-        x = tf.nn.leaky_relu(x)
+        x = tf.nn.relu(x)
         # =======================================================================================================
         filter_num = N
         filter_size = 5
         stride = 2
         x = slim.conv2d(x, filter_num, filter_size, stride, activation_fn=None)
-        x = tf.nn.leaky_relu(x)
+        x = tf.nn.relu(x)
         # =======================================================================================================
         filter_num = N
         filter_size = 5

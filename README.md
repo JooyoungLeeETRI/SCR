@@ -85,3 +85,6 @@ Please follow the following steps to use the pretrained models:
 * Unpack the downloaded zip files.
 * Move the unpacked "logs" directories into the corresponding model directories.
 * Now you can test with the pretrained models or use them as pretrained models for the next step of the training.
+
+## Pytorch version
+The Pytorch version of our SCR is available at [https://github.com/swimmiing/SCR-Torch](https://github.com/swimmiing/SCR-Torch). We deeply appreciate their efforts.
